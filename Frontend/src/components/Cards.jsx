@@ -4,11 +4,11 @@ function Cards({item }) {
     
   return (
     <>
-    <div>
-    <div className="card bg-base-100 w-96 shadow-xl">
+    <div className="mt-4 my-3 p-3">
+    <div className="card bg-base-100 w-92 shadow-xl hover:scale-105 duration-200 dark:bg-slate-900 dark:text-white">
   <figure>
     <img
-      src="https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?t=st=1724258104~exp=1724261704~hmac=363d8b97b18658dfc1648067c67fb4d5c50a0a36715977a4f6bf23092c0d474a&w=740"
+      src={item.image}
       alt="Shoes" />
   </figure>
   <div className="card-body">
@@ -19,7 +19,7 @@ function Cards({item }) {
     <p>{item.title}</p>
     <div className="card-actions  justify-between">
       <div className="badge badge-outline">${item.price}</div>
-      <div className="badge badge-outline hover:text-pink-500">Buy Now</div>
+      <div className="cursor-pointer px-2 py-1 badge badge-outline rounded-full border-[2px] hover:bg-pink-500 hover:text-white  duration-200">Buy Now</div>
     </div>
   </div>
 </div>
