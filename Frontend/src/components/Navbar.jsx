@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { useState } from "react"
+import Login from './Login';
 
 function Navbar() {
 
@@ -87,7 +88,7 @@ function Navbar() {
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 16 16"
     fill="currentColor"
-    className="h-4 w-4 opacity-70">
+    className="h-4 w-4 opacity-70 dark:bg-slate-900 dark:text-white">
     <path
       fillRule="evenodd"
       d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
@@ -122,7 +123,11 @@ function Navbar() {
   </svg>
 </label>
   <div className="">
-    <a className="bg-black text-white px-3 py-2 rounded-md hover:bg-slate-800 duration-300 cursor-pointer">Login</a>
+    <a className="bg-black text-white px-3 py-2 rounded-md hover:bg-slate-800 duration-300 cursor-pointer" 
+    onClick={()=>document.getElementById("my_modal_3").showModal()}
+    >
+      Login</a>
+      <Login />
   </div>
 </div>
 </div>
